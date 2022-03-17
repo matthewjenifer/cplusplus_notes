@@ -1,5 +1,5 @@
 // https://replit.com/@matthewjenifer/MainNotes#main.cpp | https://www.sololearn.com/learning/1051
-// https://www.onlinegdb.com/online_c++_compiler 
+// https://www.programiz.com/cpp-programming/online-compiler/
 
 /* singla and multi line comments work the same as in java */
 
@@ -63,12 +63,78 @@ main ()				// cout is used to perform output on the standard output device which
   int sum = a + b; 
   int sum2 = c * d;
   int sum3 = num + num2;
- 
+
+  // ================================================== IF-STATEMENTS =========================================================
+
+  if(sum != sum2){
+    cout << "Yo Matt" << endl;
+  }
+
+  if(sum != sum){ // If the condition is false, the statements are simply ignored, and the program continues to run after the if statements body.
+    cout << "Ayo Matt" << endl;
+  }
+  
+  if(j >= t){  // prints: true
+    cout << "Aye Bruh" << endl;
+  }
+
+  if(j <= t){  // false | wont print anything
+    cout << "Bruh" << endl;
+  }
+
+  if(j == t){  // false | prints else statement: ...
+    cout << "Aye Bruh again" << endl;
+  } else {
+    cout << ".." << endl;
+    cout << "..." << endl;
+    cout << "...." << endl;
+  }
+
+  if(sum2 >= 50){
+    cout << "we up" << endl;
+    if(sum2 == 90) { // You can also include, or nest, if statements within another if statement.
+      cout << "we all the way up" << endl;
+    }
+  } else {
+    cout << "i'm going down" << endl;
+  }
+
+  if(sum2 == 90) // In if/else statements, a single statement can be included without enclosing it into curly braces. Still, including the curly braces anyway is a good practice, as they clarify the code and make it easier to read.
+    cout << "! ! !" << endl;
+  else
+    cout << "nnnnnope"<< endl;
+
+  // ================================================== WHILE AND FOR LOOPS ======================================================
+
+  while(sum < 11) { // A while loop statement repeatedly executes a target statement as long as a given condition remains true. At the point when the condition becomes false, program control is shifted to the line that immediately follows the loop.
+    cout << "Loading.." << sum << endl;
+    sum = sum + 1;
+  }
+
+  while(n < 16) { 
+    cout << "...insert number below:" << endl;
+    n++; // num++ is equivalent to num = num + 1.
+  }
+
+  int number;
+  int total = 0;
+  while(n <= 18) { // A loop can be used to obtain multiple inputs from the user. This loop will run twice
+    cin >> number;
+    cout << "...insert number below:" << endl;
+    total += number;
+    n++;
+  }
+  cout << "Entered total: " << total << "..and now for something odd" << endl;
+
+for(int v = 1; v < 10; v+=2) {
+  cout << v << endl;
+}
+
   cout << "Watup Doe" << endl; // The cout object does not insert a line break at the end of the output. One way to print two lines is to use the endl manipulator, which will put in a line break. 
   cout << "Oh " << "we on " << "C++ now! \n"; // The new line character \n can be used as an alternative to endl. Using a single cout statement with as many instances of \n as your program requires will print out multiple lines of text. The backslash (\) is called an escape character, and indicates a "special" character.	
   cout << "..but will \n this work?\n"; // In C++, the semicolon is used to terminate a statement. Each statement must end with a semicolon. It indicates the end of one logical expression.
   cout << myFirstIntVariable<<endl; // prints: 1
-  cout << sum << endl; // prints: 8
+  cout << sum << endl; // prints: 13
   cout << sum2 << endl; // prints: 90
   cout << d << endl; // prints: 9
   cout << e << endl; // prints: 9
@@ -77,7 +143,7 @@ main ()				// cout is used to perform output on the standard output device which
   cout << k << endl; // prints: 5
   cout << l << endl; // prints: 3
   cout << m << endl; // prints: 25
-  cout << n << endl; // prints: 15
+  cout << n << endl; 
   cout << o << endl; // prints: 100
   cout << p << endl; // prints: 4
   cout << q << endl; // prints: 0
