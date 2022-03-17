@@ -1,4 +1,5 @@
-// https://www.onlinegdb.com/online_c++_compiler | https://www.sololearn.com/learning/1051
+// https://replit.com/@matthewjenifer/MainNotes#main.cpp | https://www.sololearn.com/learning/1051
+// https://www.onlinegdb.com/online_c++_compiler 
 
 /* singla and multi line comments work the same as in java */
 
@@ -18,8 +19,40 @@ main ()				// cout is used to perform output on the standard output device which
 
   int c; // You have the option to assign a value to the variable at the time you declare the variable or to declare it and assign a value later. You can also change the value of a variable.
   int d = 42;
-  c = 10;
+  c = 10; // Specifying the data type is required just once, at the time when the variable is declared. After that, the variable may be used without referring to the data type. Specifying the data type for a given variable more than once results in a syntax error.
   d = 9; 
+
+  int e = d;
+
+  auto f = 7; // The auto keyword allows you to automatically deduct the type of the variable being declared. It infers the data type of the variable from its value. Any variable declared with the auto keyword should be initialized at the time of its declaration or there will be an error.
+  auto g = 3.45;
+  auto h = "im a string";
+
+  int i = 40 + 60;
+
+  int j = 6+9/3; // Operator precedence determines the grouping of terms in an expression, which affects how an expression is evaluated. Certain operators take higher precedence over others; for example, the division operator has higher over the addition operator.
+
+  int k = (6+9)/3; //This, however, will print "5" instead of "9" - as in mathematics, using parentheses alters operators precedence.
+  int l = ((((6-4)/2)*2)+9)/3; // Parentheses force the operations to have higher precedence. If there are parenthetical expressions nested within one another, the expression within the innermost parentheses is evaluated first. If none of the expressions are in parentheses, multiplicative (multiplication, division, modulus) operators will be evaluated before additive (addition, subtraction) operators.
+
+  int m = 20;
+  m += 5;
+  int n = 20;
+  n -= 5;
+  int o = 20;
+  o *= 5;
+  int p = 20;
+  p /= 5;
+  int q = 20;
+  q %= 5;
+  int r = 5;
+  r++;
+
+  int s = 5;
+  int t = ++s; // Prefix increments the value, and then proceeds with the expression.
+
+  int u = s--; // Postfix evaluates the expression and then performs the incrementing.
+
 
   int num, num2; // To enable the user to input a value, use cin in combination with the extraction operator (>>). The variable containing the extracted data follows the operator. The following example shows how to accept user input and store it in the num variable:
   cout << "Please enter a number \n";
@@ -28,16 +61,31 @@ main ()				// cout is used to perform output on the standard output device which
   cin >> num2;
 
   int sum = a + b; 
-  int sum2 = c + d;
+  int sum2 = c * d;
   int sum3 = num + num2;
+ 
   cout << "Watup Doe" << endl; // The cout object does not insert a line break at the end of the output. One way to print two lines is to use the endl manipulator, which will put in a line break. 
   cout << "Oh " << "we on " << "C++ now! \n"; // The new line character \n can be used as an alternative to endl. Using a single cout statement with as many instances of \n as your program requires will print out multiple lines of text. The backslash (\) is called an escape character, and indicates a "special" character.	
   cout << "..but will \n this work?\n"; // In C++, the semicolon is used to terminate a statement. Each statement must end with a semicolon. It indicates the end of one logical expression.
-  cout << myFirstIntVariable<<endl;
+  cout << myFirstIntVariable<<endl; // prints: 1
   cout << sum << endl; // prints: 8
-  cout << sum2 << endl; // prints: 19
+  cout << sum2 << endl; // prints: 90
   cout << d << endl; // prints: 9
-  cout << "Your sum is: " << sum3 << endl; 
+  cout << e << endl; // prints: 9
+  cout << i << endl; // prints: 100
+  cout << j << endl; // prints: 9
+  cout << k << endl; // prints: 5
+  cout << l << endl; // prints: 3
+  cout << m << endl; // prints: 25
+  cout << n << endl; // prints: 15
+  cout << o << endl; // prints: 100
+  cout << p << endl; // prints: 4
+  cout << q << endl; // prints: 0
+  cout << r << endl; // prints: 6
+  cout << s << endl; // prints: 5
+  cout << t << endl; // prints: 6
+  cout << u << endl; // prints: 6
+  cout << "Your sum is: " << sum3 << endl; // prints: sum of numbers entered when program starts.
 
   return 0;
 }
